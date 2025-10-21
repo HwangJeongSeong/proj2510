@@ -1,0 +1,16 @@
+sever:
+  port: 8090
+spring:
+  thymeleaf:
+    cache: false
+  output:
+    ansi:
+      enabled: always
+    datasource:
+      url: jdbc:h2:mem:db_dev;MODE=MYSQL
+      username: sa
+      password:
+      driver-class-name: org.h2.Driver
+
+custom:
+  fileDirPath: /usr/file
