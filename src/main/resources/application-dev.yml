@@ -1,16 +1,29 @@
-sever:
+# 서버 포트를 8090으로 설정
+server:
   port: 8090
+# Spring Boot 설정 (개발 환경)
 spring:
+  # Thymeleaf 템플릿 엔진 설정
   thymeleaf:
+    # 캐시를 비활성화하여 개발 중 변경사항 즉시 반영
     cache: false
+  # 콘솔 출력 설정
   output:
+    # ANSI 컬러 출력을 항상 사용
     ansi:
       enabled: always
-    datasource:
-      url: jdbc:h2:mem:db_dev;MODE=MYSQL
-      username: sa
-      password:
-      driver-class-name: org.h2.Driver
+  # 데이터베이스 접속 설정
+  datasource:
+    # H2 인메모리 데이터베이스 사용 (개발용)
+    url: jdbc:h2:mem:db_dev;MODE=MYSQL
+    # 데이터베이스 사용자 이름
+    username: sa
+    # 데이터베이스 비밀번호 (없음)
+    password:
+    # JDBC 드라이버 클래스
+    driver-class-name: org.h2.Driver
 
+# 사용자 정의 설정
 custom:
+  # 파일 업로드 경로
   fileDirPath: /usr/file

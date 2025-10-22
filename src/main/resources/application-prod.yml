@@ -1,2 +1,4 @@
+# 사용자 정의 설정 (운영 환경)
 custom:
+  # 파일 업로드 경로
   fileDirPath: /usr/file
