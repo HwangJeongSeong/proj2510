@@ -3,6 +3,7 @@ package com.rest.proj.domain.article.controller;
 import com.rest.proj.domain.article.entity.Article;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -21,5 +22,12 @@ public class ApiV1ArticleController {
         articles.add(new Article(3L));
 
         return articles;
+    }
+
+    @GetMapping("/{id}")
+    public Article getArticle(@PathVariable("id") Long id) {
+        Article article = new Article((id));
+
+        return article;
     }
 }
